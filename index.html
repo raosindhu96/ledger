@@ -1358,8 +1358,8 @@ function normaliseDesc(raw) {
 
 // ── Config (replace with your Supabase project values) ────────────────────
 // Get these from: supabase.com → your project → Settings → API
-const SUPABASE_URL      = 'YOUR_SUPABASE_URL';       // e.g. https://abc123.supabase.co
-const SUPABASE_ANON_KEY = 'YOUR_SUPABASE_ANON_KEY';  // starts with eyJ...
+const SUPABASE_URL      = https://gcllfflngmdkytjpgarw.supabase.co/rest/v1/;       // e.g. https://abc123.supabase.co
+const SUPABASE_ANON_KEY = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdjbGxmZmxuZ21ka3l0anBnYXJ3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzkwNjU0MjcsImV4cCI6MjA5NDY0MTQyN30.KVlqKmG7NjAR1Eqm6VWNhj_6zTjGb8Wmvg80eaXKuCc;  // starts with eyJ...
 
 // ── State ─────────────────────────────────────────────────────────────────
 let _db   = null;   // Supabase client
@@ -1367,14 +1367,14 @@ let _user = null;   // current authenticated user
 let _guestMode = false;
 
 function isSupabaseConfigured() {
-  return SUPABASE_URL !== 'YOUR_SUPABASE_URL' && SUPABASE_ANON_KEY !== 'YOUR_SUPABASE_ANON_KEY';
+  return SUPABASE_URL !== https://gcllfflngmdkytjpgarw.supabase.co/rest/v1/ && SUPABASE_ANON_KEY !== eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdjbGxmZmxuZ21ka3l0anBnYXJ3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzkwNjU0MjcsImV4cCI6MjA5NDY0MTQyN30.KVlqKmG7NjAR1Eqm6VWNhj_6zTjGb8Wmvg80eaXKuCc;
 }
 
 // ── Supabase init ─────────────────────────────────────────────────────────
 function initSupabase() {
   if (!isSupabaseConfigured()) return false;
   try {
-    _db = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+    _db = supabase.createClient(https://gcllfflngmdkytjpgarw.supabase.co/rest/v1/, eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdjbGxmZmxuZ21ka3l0anBnYXJ3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzkwNjU0MjcsImV4cCI6MjA5NDY0MTQyN30.KVlqKmG7NjAR1Eqm6VWNhj_6zTjGb8Wmvg80eaXKuCc);
     return true;
   } catch(e) {
     console.warn('Supabase init failed:', e);
